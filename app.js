@@ -9,10 +9,10 @@ const addTask = (e) => {
   e.preventDefault();
   const inputValue = input.value;
   if (inputValue === "") return alert("Nic nie zostało wprowadzone");
-  else if (inputValue.length > 35) return alert("Zbyt dlugie zadanie");
-  let newListItem = document.createElement("li");
-  let iconBefore = document.createElement("i");
-  let iconAfter = document.createElement("i");
+  else if (inputValue.length > 55) return alert("Zbyt dlugie zadanie");
+  const newListItem = document.createElement("li");
+  const iconBefore = document.createElement("i");
+  const iconAfter = document.createElement("i");
   ul.appendChild(newListItem).textContent = inputValue;
   newListItem.appendChild(iconAfter).className = "fas fa-times-circle";
   newListItem.appendChild(iconBefore).className = "far fa-circle";
