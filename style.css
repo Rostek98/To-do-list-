@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #011826;
+  font-family: "Oswald", sans-serif;
+  box-sizing: border-box;
+}
+.wrapper {
+  position: relative;
+  max-width: 1024px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+h1 {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 65px;
+  letter-spacing: 5px;
+}
+
+.search {
+  position: absolute;
+  margin-top: 40px;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+form input {
+  line-height: 50px;
+  width: 40vw;
+  font-size: 25px;
+}
+
+form button {
+  position: absolute;
+  padding: 0 15px;
+  line-height: 50px;
+  font-size: 35px;
+  top: 0;
+  right: 0;
+  background: white;
+  color: #bf344d;
+}
+.added-tasks {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 40vw;
+  /* min-height: 600px; */
+}
+.added-tasks ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+.added-tasks li {
+  position: relative;
+  color: black;
+  font-size: 25px;
+  background-color: white;
+  margin: 5px 0;
+  padding: 10px 0 10px 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+}
+.added-tasks li:hover {
+  background-color: #bf344d;
+  color: white;
+}
+.added-tasks li:hover i.fa-times-circle {
+  color: white;
+}
+
+.added-tasks li:hover i.fa-circle {
+  color: white;
+}
+.added-tasks li i.fa-times-circle {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: #bf344d;
+  text-align: justify;
+}
+.added-tasks i.fa-circle {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  color: #bf344d;
+}
+.fa-check-circle {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  color: green;
+}
+.added-tasks li:hover i.fa-check-circle {
+  color: white;
+}
+
+@media (max-width: 1024px) {
+  .added-tasks {
+    top: 38%;
+    width: 70vw;
+  }
+  form input {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 768px) {
+  form input {
+    width: 80vw;
+  }
+  .added-tasks {
+    top: 40%;
+    width: 80vw;
+  }
+}
+
+@media (max-width: 444px) {
+  h1 {
+    top: 20%;
+    font-size: 40px;
+  }
+  .search {
+    top: 22%;
+  }
+  form input {
+    width: 85vw;
+    line-height: 38px;
+    font-size: 20px;
+  }
+  form button {
+    line-height: 38px;
+    font-size: 25px;
+  }
+  .added-tasks {
+    top: 35%;
+    width: 85vw;
+  }
+  .added-tasks li {
+    font-size: 20px;
+    padding: 5px 0 5px 33px;
+  }
+
+  .added-tasks li i.fa-times-circle {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    top: 20%;
+    font-size: 35px;
+  }
+  .search {
+    top: 20%;
+  }
+  form input {
+    width: 85vw;
+    line-height: 25px;
+    font-size: 15px;
+  }
+  form button {
+    line-height: 25px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .added-tasks {
+    top: 35%;
+    width: 85vw;
+  }
+  .added-tasks li {
+    font-size: 15px;
+    padding: 2px 0 2px 33px;
+  }
+
+  .added-tasks li i.fa-times-circle {
+    font-size: 15px;
+  }
+}
